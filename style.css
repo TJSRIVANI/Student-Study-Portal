@@ -1,0 +1,130 @@
+/* ---------- GENERAL ---------- */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f3ff;
+    color: #302b5c;
+}
+
+
+/* ---------- HEADER ---------- */
+
+header {
+    background: linear-gradient(90deg, #5b4b9a, #7561c5);
+    color: white;
+    padding: 20px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------- HERO SECTION ---------- */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #eee7ff,
+        #dcd0ff
+    );
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #40358a;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #55506f;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.my-button {
+    display: inline-block;
+
+    padding: 14px 30px;
+    margin-top: 20px;
+
+    background-color: #7055d6;
+    color: white;
+
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+
+    border-radius: 30px;
+}
+
+.my-button:hover {
+    background-color: #5841b5;
+}
+
+
+/* ---------- CARDS ---------- */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    padding: 50px;
+}
+
+.card {
+    background-color: white;
+
+    width: 220px;
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(80, 60, 130, 0.15);
+}
+
+.card h2 {
+    color: #493b9c;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: #e5dcff;
+    text-align: center;
+
+    padding: 20px;
+
+    color: #40358a;
+}

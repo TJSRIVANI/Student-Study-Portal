@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object-Oriented Software Engineering Quiz</title>
+</head>
+
+<body>
+
+    <h1>Object-Oriented Software Engineering Quiz</h1>
+    <p>Answer all 10 questions.</p>
+
+    <form id="quizForm">
+
+        <h3>1. What does OOP stand for?</h3>
+        <input type="radio" name="q1" value="A"> A) Object-Oriented Programming<br>
+        <input type="radio" name="q1" value="B"> B) Object Operating Program<br>
+        <input type="radio" name="q1" value="C"> C) Open Object Programming<br>
+        <input type="radio" name="q1" value="D"> D) Operating Object Process<br>
+
+        <h3>2. Which is a fundamental principle of OOP?</h3>
+        <input type="radio" name="q2" value="A"> A) Encapsulation<br>
+        <input type="radio" name="q2" value="B"> B) Compilation<br>
+        <input type="radio" name="q2" value="C"> C) Linking<br>
+        <input type="radio" name="q2" value="D"> D) Debugging<br>
+
+        <h3>3. Which OOP concept combines data and methods into a single unit?</h3>
+        <input type="radio" name="q3" value="A"> A) Inheritance<br>
+        <input type="radio" name="q3" value="B"> B) Encapsulation<br>
+        <input type="radio" name="q3" value="C"> C) Abstraction<br>
+        <input type="radio" name="q3" value="D"> D) Polymorphism<br>
+
+        <h3>4. What is inheritance?</h3>
+        <input type="radio" name="q4" value="A"> A) Hiding data<br>
+        <input type="radio" name="q4" value="B"> B) Creating a new class from an existing class<br>
+        <input type="radio" name="q4" value="C"> C) Removing a class<br>
+        <input type="radio" name="q4" value="D"> D) Creating a database<br>
+
+        <h3>5. Which concept allows one interface to have multiple forms?</h3>
+        <input type="radio" name="q5" value="A"> A) Encapsulation<br>
+        <input type="radio" name="q5" value="B"> B) Inheritance<br>
+        <input type="radio" name="q5" value="C"> C) Polymorphism<br>
+        <input type="radio" name="q5" value="D"> D) Compilation<br>
+
+        <h3>6. What is abstraction?</h3>
+        <input type="radio" name="q6" value="A"> A) Showing only essential details<br>
+        <input type="radio" name="q6" value="B"> B) Showing all implementation details<br>
+        <input type="radio" name="q6" value="C"> C) Removing objects<br>
+        <input type="radio" name="q6" value="D"> D) Creating multiple databases<br>
+
+        <h3>7. What is a class?</h3>
+        <input type="radio" name="q7" value="A"> A) An instance of an object<br>
+        <input type="radio" name="q7" value="B"> B) A blueprint for creating objects<br>
+        <input type="radio" name="q7" value="C"> C) A compiler<br>
+        <input type="radio" name="q7" value="D"> D) A database<br>
+
+        <h3>8. What is an object?</h3>
+        <input type="radio" name="q8" value="A"> A) An instance of a class<br>
+        <input type="radio" name="q8" value="B"> B) A programming language<br>
+        <input type="radio" name="q8" value="C"> C) A method only<br>
+        <input type="radio" name="q8" value="D"> D) A variable type<br>
+
+        <h3>9. Which diagram is commonly used to represent classes and their relationships?</h3>
+        <input type="radio" name="q9" value="A"> A) Flowchart<br>
+        <input type="radio" name="q9" value="B"> B) UML Class Diagram<br>
+        <input type="radio" name="q9" value="C"> C) Pie Chart<br>
+        <input type="radio" name="q9" value="D"> D) Bar Chart<br>
+
+        <h3>10. What does UML stand for?</h3>
+        <input type="radio" name="q10" value="A"> A) Unified Modeling Language<br>
+        <input type="radio" name="q10" value="B"> B) Universal Machine Language<br>
+        <input type="radio" name="q10" value="C"> C) Unified Machine Logic<br>
+        <input type="radio" name="q10" value="D"> D) User Modeling Language<br>
+
+        <br><br>
+
+        <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+
+    </form>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function checkAnswers() {
+
+            let answers = {
+                q1: "A",
+                q2: "A",
+                q3: "B",
+                q4: "B",
+                q5: "C",
+                q6: "A",
+                q7: "B",
+                q8: "A",
+                q9: "B",
+                q10: "A"
+            };
+
+            let score = 0;
+
+            for (let question in answers) {
+
+                let selected = document.querySelector(
+                    'input[name="' + question + '"]:checked'
+                );
+
+                if (selected && selected.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById("result").innerHTML =
+                "Your Score: " + score + " / 10";
+        }
+    </script>
+
+</body>
+</html>

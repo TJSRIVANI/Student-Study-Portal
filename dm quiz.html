@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discrete Mathematics Quiz</title>
+</head>
+
+<body>
+
+    <h1>Discrete Mathematics Quiz</h1>
+    <p>Answer all 10 questions.</p>
+
+    <form id="quizForm">
+
+        <h3>1. What is a set?</h3>
+        <input type="radio" name="q1" value="A"> A) A collection of well-defined objects<br>
+        <input type="radio" name="q1" value="B"> B) A programming language<br>
+        <input type="radio" name="q1" value="C"> C) A sequence only<br>
+        <input type="radio" name="q1" value="D"> D) A matrix<br>
+
+        <h3>2. Which symbol represents the empty set?</h3>
+        <input type="radio" name="q2" value="A"> A) U<br>
+        <input type="radio" name="q2" value="B"> B) ∅<br>
+        <input type="radio" name="q2" value="C"> C) ∈<br>
+        <input type="radio" name="q2" value="D"> D) ∩<br>
+
+        <h3>3. What does A ∪ B represent?</h3>
+        <input type="radio" name="q3" value="A"> A) Intersection<br>
+        <input type="radio" name="q3" value="B"> B) Union<br>
+        <input type="radio" name="q3" value="C"> C) Difference<br>
+        <input type="radio" name="q3" value="D"> D) Complement<br>
+
+        <h3>4. What does A ∩ B represent?</h3>
+        <input type="radio" name="q4" value="A"> A) Union<br>
+        <input type="radio" name="q4" value="B"> B) Intersection<br>
+        <input type="radio" name="q4" value="C"> C) Difference<br>
+        <input type="radio" name="q4" value="D"> D) Complement<br>
+
+        <h3>5. A statement that is either true or false is called a:</h3>
+        <input type="radio" name="q5" value="A"> A) Proposition<br>
+        <input type="radio" name="q5" value="B"> B) Variable<br>
+        <input type="radio" name="q5" value="C"> C) Function<br>
+        <input type="radio" name="q5" value="D"> D) Set<br>
+
+        <h3>6. What is the negation of a true proposition?</h3>
+        <input type="radio" name="q6" value="A"> A) True<br>
+        <input type="radio" name="q6" value="B"> B) False<br>
+        <input type="radio" name="q6" value="C"> C) Both<br>
+        <input type="radio" name="q6" value="D"> D) Undefined<br>
+
+        <h3>7. A graph consists mainly of:</h3>
+        <input type="radio" name="q7" value="A"> A) Vertices and edges<br>
+        <input type="radio" name="q7" value="B"> B) Classes and objects<br>
+        <input type="radio" name="q7" value="C"> C) Rows and columns<br>
+        <input type="radio" name="q7" value="D"> D) Keys and values<br>
+
+        <h3>8. What is a relation from a set to itself called?</h3>
+        <input type="radio" name="q8" value="A"> A) Binary relation<br>
+        <input type="radio" name="q8" value="B"> B) Universal relation<br>
+        <input type="radio" name="q8" value="C"> C) Identity relation<br>
+        <input type="radio" name="q8" value="D"> D) Empty relation<br>
+
+        <h3>9. Which of the following is a logical operator?</h3>
+        <input type="radio" name="q9" value="A"> A) AND<br>
+        <input type="radio" name="q9" value="B"> B) ADD<br>
+        <input type="radio" name="q9" value="C"> C) DIVIDE<br>
+        <input type="radio" name="q9" value="D"> D) MOD<br>
+
+        <h3>10. A tree in graph theory is a graph that is:</h3>
+        <input type="radio" name="q10" value="A"> A) Connected and contains no cycles<br>
+        <input type="radio" name="q10" value="B"> B) Disconnected<br>
+        <input type="radio" name="q10" value="C"> C) Complete only<br>
+        <input type="radio" name="q10" value="D"> D) Always cyclic<br>
+
+        <br><br>
+
+        <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+
+    </form>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function checkAnswers() {
+
+            let answers = {
+                q1: "A",
+                q2: "B",
+                q3: "B",
+                q4: "B",
+                q5: "A",
+                q6: "B",
+                q7: "A",
+                q8: "A",
+                q9: "A",
+                q10: "A"
+            };
+
+            let score = 0;
+
+            for (let question in answers) {
+
+                let selected = document.querySelector(
+                    'input[name="' + question + '"]:checked'
+                );
+
+                if (selected && selected.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById("result").innerHTML =
+                "Your Score: " + score + " / 10";
+        }
+    </script>
+
+</body>
+</html>

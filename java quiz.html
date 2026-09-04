@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java Programming Quiz</title>
+</head>
+
+<body>
+
+    <h1>Java Programming Quiz</h1>
+    <p>Answer all 10 questions.</p>
+
+    <form id="quizForm">
+
+        <h3>1. Java is primarily a:</h3>
+        <input type="radio" name="q1" value="A"> A) Markup language<br>
+        <input type="radio" name="q1" value="B"> B) Object-oriented programming language<br>
+        <input type="radio" name="q1" value="C"> C) Database<br>
+        <input type="radio" name="q1" value="D"> D) Operating system<br>
+
+        <h3>2. Which component is required to compile Java programs?</h3>
+        <input type="radio" name="q2" value="A"> A) JDK<br>
+        <input type="radio" name="q2" value="B"> B) HTML<br>
+        <input type="radio" name="q2" value="C"> C) CSS<br>
+        <input type="radio" name="q2" value="D"> D) SQL<br>
+
+        <h3>3. Which keyword is used to create a class in Java?</h3>
+        <input type="radio" name="q3" value="A"> A) object<br>
+        <input type="radio" name="q3" value="B"> B) class<br>
+        <input type="radio" name="q3" value="C"> C) new<br>
+        <input type="radio" name="q3" value="D"> D) define<br>
+
+        <h3>4. Which keyword is used to create an object?</h3>
+        <input type="radio" name="q4" value="A"> A) class<br>
+        <input type="radio" name="q4" value="B"> B) new<br>
+        <input type="radio" name="q4" value="C"> C) object<br>
+        <input type="radio" name="q4" value="D"> D) create<br>
+
+        <h3>5. Which of the following is NOT a primitive data type in Java?</h3>
+        <input type="radio" name="q5" value="A"> A) int<br>
+        <input type="radio" name="q5" value="B"> B) float<br>
+        <input type="radio" name="q5" value="C"> C) char<br>
+        <input type="radio" name="q5" value="D"> D) String<br>
+
+        <h3>6. Which method is the entry point of a Java program?</h3>
+        <input type="radio" name="q6" value="A"> A) start()<br>
+        <input type="radio" name="q6" value="B"> B) main()<br>
+        <input type="radio" name="q6" value="C"> C) run()<br>
+        <input type="radio" name="q6" value="D"> D) execute()<br>
+
+        <h3>7. Which keyword is used for inheritance in Java?</h3>
+        <input type="radio" name="q7" value="A"> A) inherit<br>
+        <input type="radio" name="q7" value="B"> B) extends<br>
+        <input type="radio" name="q7" value="C"> C) implements<br>
+        <input type="radio" name="q7" value="D"> D) super<br>
+
+        <h3>8. Which keyword is used to inherit an interface?</h3>
+        <input type="radio" name="q8" value="A"> A) extends<br>
+        <input type="radio" name="q8" value="B"> B) inherits<br>
+        <input type="radio" name="q8" value="C"> C) interface<br>
+        <input type="radio" name="q8" value="D"> D) super<br>
+
+        <h3>9. Which keyword is used to handle exceptions?</h3>
+        <input type="radio" name="q9" value="A"> A) try<br>
+        <input type="radio" name="q9" value="B"> B) check<br>
+        <input type="radio" name="q9" value="C"> C) error<br>
+        <input type="radio" name="q9" value="D"> D) exception<br>
+
+        <h3>10. Which symbol is used to end a statement in Java?</h3>
+        <input type="radio" name="q10" value="A"> A) :<br>
+        <input type="radio" name="q10" value="B"> B) .<br>
+        <input type="radio" name="q10" value="C"> C) ;<br>
+        <input type="radio" name="q10" value="D"> D) ,<br>
+
+        <br><br>
+
+        <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+
+    </form>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function checkAnswers() {
+
+            let answers = {
+                q1: "B",
+                q2: "A",
+                q3: "B",
+                q4: "B",
+                q5: "D",
+                q6: "B",
+                q7: "B",
+                q8: "A",
+                q9: "A",
+                q10: "C"
+            };
+
+            let score = 0;
+
+            for (let question in answers) {
+
+                let selected = document.querySelector(
+                    'input[name="' + question + '"]:checked'
+                );
+
+                if (selected && selected.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById("result").innerHTML =
+                "Your Score: " + score + " / 10";
+        }
+    </script>
+
+</body>
+</html>
