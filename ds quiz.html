@@ -3,14 +3,17 @@
 <head>
     <title>Data Structures Quiz</title>
 
-    <style>
-        .wrong {
-            color: red;
-        }
-        .correct {
-            color: green;
-        }
-    </style>
+   <style>
+    .wrong {
+        color: red;
+        font-weight: bold;
+    }
+
+    .correct {
+        color: green;
+        font-weight: bold;
+    }
+</style>
 </head>
 
 <body>
@@ -105,26 +108,60 @@
                 q10: "B"
             };
 
-            let score = 0;
+             let score = 0;
 
-            for (let question in answers) {
+    for (let question in answers) {
 
-                let selected = document.querySelector(
-                    'input[name="' + question + '"]:checked'
-                );
+        let selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
 
-                if (selected && selected.value === answers[question]) {
-                    score++;
-                }
-                else if (selected) {
-                    selected.parentElement.classList.add("correct");
-                }
+        let options = document.querySelectorAll(
+            'input[name="' + question + '"]'
+        );
+
+        // Reset previous colors
+        options.forEach(function(option) {
+            option.parentElement.style.color = "";
+            option.parentElement.style.fontWeight = "";
+        });
+
+        if (selected) {
+
+            // Correct answer
+            if (selected.value === answers[question]) {
+
+                score++;
+
+                // Leave correct answer as it is
+                selected.parentElement.style.color = "";
+
             }
 
-            document.getElementById("result").innerHTML =
-                "Your Score: " + score + " / 10";
-        }
+            // Wrong answer
+            else {
 
+                // Selected wrong answer → RED
+                selected.parentElement.style.color = "red";
+                selected.parentElement.style.fontWeight = "bold";
+
+                // Correct answer → GREEN
+                options.forEach(function(option) {
+
+                    if (option.value === answers[question]) {
+                        option.parentElement.style.color = "green";
+                        option.parentElement.style.fontWeight = "bold";
+                    }
+
+                });
+
+            }
+        }
+    }
+
+    document.getElementById("result").innerHTML =
+        "Your Score: " + score + " / 10";
+}
     </script>
 
 </body>
