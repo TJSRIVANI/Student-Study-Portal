@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operating System Quiz</title>
 
+    <style>
+        .correct {
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+        }
+
+        #result {
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Operating System Quiz</h1>
+
+<p><b>1. What is an Operating System?</b></p>
+
+<label><input type="radio" name="q1" value="A"
+onclick="check(this,'B','r1')"> A) Application software</label><br>
+
+<label><input type="radio" name="q1" value="B"
+onclick="check(this,'B','r1')"> B) System software</label><br>
+
+<label><input type="radio" name="q1" value="C"
+onclick="check(this,'B','r1')"> C) Programming language</label><br>
+
+<label><input type="radio" name="q1" value="D"
+onclick="check(this,'B','r1')"> D) Database</label>
+
+<p id="r1"></p>
+
+
+<p><b>2. Which of the following is an example of an Operating System?</b></p>
+
+<label><input type="radio" name="q2" value="A"
+onclick="check(this,'C','r2')"> A) MS Word</label><br>
+
+<label><input type="radio" name="q2" value="B"
+onclick="check(this,'C','r2')"> B) Google Chrome</label><br>
+
+<label><input type="radio" name="q2" value="C"
+onclick="check(this,'C','r2')"> C) Linux</label><br>
+
+<label><input type="radio" name="q2" value="D"
+onclick="check(this,'C','r2')"> D) MySQL</label>
+
+<p id="r2"></p>
+
+
+<p><b>3. Which process state indicates that a process is currently executing?</b></p>
+
+<label><input type="radio" name="q3" value="A"
+onclick="check(this,'C','r3')"> A) Ready</label><br>
+
+<label><input type="radio" name="q3" value="B"
+onclick="check(this,'C','r3')"> B) Waiting</label><br>
+
+<label><input type="radio" name="q3" value="C"
+onclick="check(this,'C','r3')"> C) Running</label><br>
+
+<label><input type="radio" name="q3" value="D"
+onclick="check(this,'C','r3')"> D) New</label>
+
+<p id="r3"></p>
+
+
+<p><b>4. Which scheduling algorithm executes the process that arrives first?</b></p>
+
+<label><input type="radio" name="q4" value="A"
+onclick="check(this,'B','r4')"> A) Round Robin</label><br>
+
+<label><input type="radio" name="q4" value="B"
+onclick="check(this,'B','r4')"> B) FCFS</label><br>
+
+<label><input type="radio" name="q4" value="C"
+onclick="check(this,'B','r4')"> C) SJF</label><br>
+
+<label><input type="radio" name="q4" value="D"
+onclick="check(this,'B','r4')"> D) Priority</label>
+
+<p id="r4"></p>
+
+
+<p><b>5. What is a process?</b></p>
+
+<label><input type="radio" name="q5" value="A"
+onclick="check(this,'A','r5')"> A) A program in execution</label><br>
+
+<label><input type="radio" name="q5" value="B"
+onclick="check(this,'A','r5')"> B) A file</label><br>
+
+<label><input type="radio" name="q5" value="C"
+onclick="check(this,'A','r5')"> C) A memory location</label><br>
+
+<label><input type="radio" name="q5" value="D"
+onclick="check(this,'A','r5')"> D) A hardware device</label>
+
+<p id="r5"></p>
+
+
+<p><b>6. Which of the following is used for process synchronization?</b></p>
+
+<label><input type="radio" name="q6" value="A"
+onclick="check(this,'A','r6')"> A) Semaphore</label><br>
+
+<label><input type="radio" name="q6" value="B"
+onclick="check(this,'A','r6')"> B) Compiler</label><br>
+
+<label><input type="radio" name="q6" value="C"
+onclick="check(this,'A','r6')"> C) Cache</label><br>
+
+<label><input type="radio" name="q6" value="D"
+onclick="check(this,'A','r6')"> D) Register</label>
+
+<p id="r6"></p>
+
+
+<p><b>7. What is a deadlock?</b></p>
+
+<label><input type="radio" name="q7" value="A"
+onclick="check(this,'B','r7')"> A) A process terminating normally</label><br>
+
+<label><input type="radio" name="q7" value="B"
+onclick="check(this,'B','r7')"> B) Processes waiting indefinitely for resources</label><br>
+
+<label><input type="radio" name="q7" value="C"
+onclick="check(this,'B','r7')"> C) A system shutdown</label><br>
+
+<label><input type="radio" name="q7" value="D"
+onclick="check(this,'B','r7')"> D) Memory allocation</label>
+
+<p id="r7"></p>
+
+
+<p><b>8. Which memory management technique divides memory into fixed-size blocks?</b></p>
+
+<label><input type="radio" name="q8" value="A"
+onclick="check(this,'A','r8')"> A) Paging</label><br>
+
+<label><input type="radio" name="q8" value="B"
+onclick="check(this,'A','r8')"> B) Spooling</label><br>
+
+<label><input type="radio" name="q8" value="C"
+onclick="check(this,'A','r8')"> C) Scheduling</label><br>
+
+<label><input type="radio" name="q8" value="D"
+onclick="check(this,'A','r8')"> D) Buffering</label>
+
+<p id="r8"></p>
+
+
+<p><b>9. Which of these is a type of Operating System?</b></p>
+
+<label><input type="radio" name="q9" value="A"
+onclick="check(this,'A','r9')"> A) Real-Time OS</label><br>
+
+<label><input type="radio" name="q9" value="B"
+onclick="check(this,'A','r9')"> B) HTML OS</label><br>
+
+<label><input type="radio" name="q9" value="C"
+onclick="check(this,'A','r9')"> C) SQL OS</label><br>
+
+<label><input type="radio" name="q9" value="D"
+onclick="check(this,'A','r9')"> D) Java OS</label>
+
+<p id="r9"></p>
+
+
+<p><b>10. Which component manages the core functions of an operating system?</b></p>
+
+<label><input type="radio" name="q10" value="A"
+onclick="check(this,'B','r10')"> A) Shell</label><br>
+
+<label><input type="radio" name="q10" value="B"
+onclick="check(this,'B','r10')"> B) Kernel</label><br>
+
+<label><input type="radio" name="q10" value="C"
+onclick="check(this,'B','r10')"> C) Browser</label><br>
+
+<label><input type="radio" name="q10" value="D"
+onclick="check(this,'B','r10')"> D) Compiler</label>
+
+<p id="r10"></p>
+
+
+<br>
+
+<button onclick="showScore()">Submit Quiz</button>
+
+<h2 id="result"></h2>
+
+
+<script>
+
+function check(answer, correct, resultId) {
+
+    let result = document.getElementById(resultId);
+
+    if (answer.value == correct) {
+
+        answer.parentElement.classList.add("correct");
+
+        result.innerHTML = "Correct Answer ✓";
+        result.className = "correct";
+
+    } else {
+
+        answer.parentElement.classList.add("wrong");
+
+        result.innerHTML =
+            "Wrong Answer ✗ <br> Correct Answer: " + correct;
+
+        result.className = "wrong";
+    }
+}
+
+
+function showScore() {
+
+    let answers = {
+        q1: "B",
+        q2: "C",
+        q3: "C",
+        q4: "B",
+        q5: "A",
+        q6: "A",
+        q7: "B",
+        q8: "A",
+        q9: "A",
+        q10: "B"
+    };
+
+    let score = 0;
+
+    for (let question in answers) {
+
+        let selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value == answers[question]) {
+            score++;
+        }
+    }
+
+    document.getElementById("result").innerHTML =
+        "Your Total Score: " + score + " / 10";
+}
+
+</script>
+
+</body>
+</html>
