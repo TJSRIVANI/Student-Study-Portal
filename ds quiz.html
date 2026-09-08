@@ -1,114 +1,367 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Structures Quiz</title>
+    <title>Discrete Mathematics Quiz</title>
 
-   <style>
-    .wrong {
-        color: red;
-        font-weight: bold;
-    }
+    <style>
+        .correct {
+            color: green;
+        }
 
-    .correct {
-        color: green;
-        font-weight: bold;
-    }
-</style>
+        .wrong {
+            color: red;
+        }
+
+        #result {
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Data Structures Quiz</h1>
-    <p>Answer all 10 questions.</p>
+<h1>Discrete Mathematics Quiz</h1>
 
-    <form id="quizForm">
 
-        <h3>1. What is a data structure?</h3>
-        <label><input type="radio" name="q1" value="A"> A) A programming language</label><br>
-        <label><input type="radio" name="q1" value="B"> B) A way of organizing and storing data</label><br>
-        <label><input type="radio" name="q1" value="C"> C) An operating system</label><br>
-        <label><input type="radio" name="q1" value="D"> D) A compiler</label><br>
+<p><b>1. What is a set?</b></p>
 
-        <h3>2. Which data structure follows LIFO?</h3>
-        <label><input type="radio" name="q2" value="A"> A) Queue</label><br>
-        <label><input type="radio" name="q2" value="B"> B) Stack</label><br>
-        <label><input type="radio" name="q2" value="C"> C) Array</label><br>
-        <label><input type="radio" name="q2" value="D"> D) Tree</label><br>
+<label>
+<input type="radio" name="q1" value="A"
+onclick="check(this,'A','r1')">
+A) A collection of well-defined objects
+</label><br>
 
-        <h3>3. Which data structure follows FIFO?</h3>
-        <label><input type="radio" name="q3" value="A"> A) Stack</label><br>
-        <label><input type="radio" name="q3" value="B"> B) Queue</label><br>
-        <label><input type="radio" name="q3" value="C"> C) Tree</label><br>
-        <label><input type="radio" name="q3" value="D"> D) Graph</label><br>
+<label>
+<input type="radio" name="q1" value="B"
+onclick="check(this,'A','r1')">
+B) A programming language
+</label><br>
 
-        <h3>4. Which operation adds an element to a stack?</h3>
-        <label><input type="radio" name="q4" value="A"> A) Pop</label><br>
-        <label><input type="radio" name="q4" value="B"> B) Push</label><br>
-        <label><input type="radio" name="q4" value="C"> C) Delete</label><br>
-        <label><input type="radio" name="q4" value="D"> D) Peek</label><br>
+<label>
+<input type="radio" name="q1" value="C"
+onclick="check(this,'A','r1')">
+C) A sequence only
+</label><br>
 
-        <h3>5. Which operation removes an element from a stack?</h3>
-        <label><input type="radio" name="q5" value="A"> A) Push</label><br>
-        <label><input type="radio" name="q5" value="B"> B) Insert</label><br>
-        <label><input type="radio" name="q5" value="C"> C) Pop</label><br>
-        <label><input type="radio" name="q5" value="D"> D) Enqueue</label><br>
+<label>
+<input type="radio" name="q1" value="D"
+onclick="check(this,'A','r1')">
+D) A matrix
+</label>
 
-        <h3>6. Which data structure consists of nodes connected by links?</h3>
-        <label><input type="radio" name="q6" value="A"> A) Array</label><br>
-        <label><input type="radio" name="q6" value="B"> B) Linked List</label><br>
-        <label><input type="radio" name="q6" value="C"> C) Stack</label><br>
-        <label><input type="radio" name="q6" value="D"> D) Queue</label><br>
+<p id="r1"></p>
 
-        <h3>7. Which data structure is commonly used to represent hierarchical data?</h3>
-        <label><input type="radio" name="q7" value="A"> A) Tree</label><br>
-        <label><input type="radio" name="q7" value="B"> B) Array</label><br>
-        <label><input type="radio" name="q7" value="C"> C) Stack</label><br>
-        <label><input type="radio" name="q7" value="D"> D) Queue</label><br>
 
-        <h3>8. Which traversal visits the root between the left and right subtrees?</h3>
-        <label><input type="radio" name="q8" value="A"> A) Preorder</label><br>
-        <label><input type="radio" name="q8" value="B"> B) Inorder</label><br>
-        <label><input type="radio" name="q8" value="C"> C) Postorder</label><br>
-        <label><input type="radio" name="q8" value="D"> D) Level order</label><br>
+<p><b>2. Which symbol represents the empty set?</b></p>
 
-        <h3>9. Which data structure is used in Breadth-First Search (BFS)?</h3>
-        <label><input type="radio" name="q9" value="A"> A) Stack</label><br>
-        <label><input type="radio" name="q9" value="B"> B) Queue</label><br>
-        <label><input type="radio" name="q9" value="C"> C) Tree</label><br>
-        <label><input type="radio" name="q9" value="D"> D) Array</label><br>
+<label>
+<input type="radio" name="q2" value="A"
+onclick="check(this,'B','r2')">
+A) U
+</label><br>
 
-        <h3>10. Which data structure is used in Depth-First Search (DFS)?</h3>
-        <label><input type="radio" name="q10" value="A"> A) Queue</label><br>
-        <label><input type="radio" name="q10" value="B"> B) Stack</label><br>
-        <label><input type="radio" name="q10" value="C"> C) Heap</label><br>
-        <label><input type="radio" name="q10" value="D"> D) Hash table</label><br>
+<label>
+<input type="radio" name="q2" value="B"
+onclick="check(this,'B','r2')">
+B) ∅
+</label><br>
 
-        <br><br>
+<label>
+<input type="radio" name="q2" value="C"
+onclick="check(this,'B','r2')">
+C) ∈
+</label><br>
 
-        <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+<label>
+<input type="radio" name="q2" value="D"
+onclick="check(this,'B','r2')">
+D) ∩
+</label>
 
-    </form>
+<p id="r2"></p>
 
-    <h2 id="result"></h2>
 
-    <script>
+<p><b>3. What does A ∪ B represent?</b></p>
 
-        function checkAnswers() {
+<label>
+<input type="radio" name="q3" value="A"
+onclick="check(this,'B','r3')">
+A) Intersection
+</label><br>
 
-            let answers = {
-                q1: "B",
-                q2: "B",
-                q3: "B",
-                q4: "B",
-                q5: "C",
-                q6: "B",
-                q7: "A",
-                q8: "B",
-                q9: "B",
-                q10: "B"
-            };
+<label>
+<input type="radio" name="q3" value="B"
+onclick="check(this,'B','r3')">
+B) Union
+</label><br>
 
-             let score = 0;
+<label>
+<input type="radio" name="q3" value="C"
+onclick="check(this,'B','r3')">
+C) Difference
+</label><br>
+
+<label>
+<input type="radio" name="q3" value="D"
+onclick="check(this,'B','r3')">
+D) Complement
+</label>
+
+<p id="r3"></p>
+
+
+<p><b>4. What does A ∩ B represent?</b></p>
+
+<label>
+<input type="radio" name="q4" value="A"
+onclick="check(this,'B','r4')">
+A) Union
+</label><br>
+
+<label>
+<input type="radio" name="q4" value="B"
+onclick="check(this,'B','r4')">
+B) Intersection
+</label><br>
+
+<label>
+<input type="radio" name="q4" value="C"
+onclick="check(this,'B','r4')">
+C) Difference
+</label><br>
+
+<label>
+<input type="radio" name="q4" value="D"
+onclick="check(this,'B','r4')">
+D) Complement
+</label>
+
+<p id="r4"></p>
+
+
+<p><b>5. A statement that is either true or false is called a:</b></p>
+
+<label>
+<input type="radio" name="q5" value="A"
+onclick="check(this,'A','r5')">
+A) Proposition
+</label><br>
+
+<label>
+<input type="radio" name="q5" value="B"
+onclick="check(this,'A','r5')">
+B) Variable
+</label><br>
+
+<label>
+<input type="radio" name="q5" value="C"
+onclick="check(this,'A','r5')">
+C) Function
+</label><br>
+
+<label>
+<input type="radio" name="q5" value="D"
+onclick="check(this,'A','r5')">
+D) Set
+</label>
+
+<p id="r5"></p>
+
+
+<p><b>6. What is the negation of a true proposition?</b></p>
+
+<label>
+<input type="radio" name="q6" value="A"
+onclick="check(this,'B','r6')">
+A) True
+</label><br>
+
+<label>
+<input type="radio" name="q6" value="B"
+onclick="check(this,'B','r6')">
+B) False
+</label><br>
+
+<label>
+<input type="radio" name="q6" value="C"
+onclick="check(this,'B','r6')">
+C) Both
+</label><br>
+
+<label>
+<input type="radio" name="q6" value="D"
+onclick="check(this,'B','r6')">
+D) Undefined
+</label>
+
+<p id="r6"></p>
+
+
+<p><b>7. A graph consists mainly of:</b></p>
+
+<label>
+<input type="radio" name="q7" value="A"
+onclick="check(this,'A','r7')">
+A) Vertices and edges
+</label><br>
+
+<label>
+<input type="radio" name="q7" value="B"
+onclick="check(this,'A','r7')">
+B) Classes and objects
+</label><br>
+
+<label>
+<input type="radio" name="q7" value="C"
+onclick="check(this,'A','r7')">
+C) Rows and columns
+</label><br>
+
+<label>
+<input type="radio" name="q7" value="D"
+onclick="check(this,'A','r7')">
+D) Keys and values
+</label>
+
+<p id="r7"></p>
+
+
+<p><b>8. What is a relation from a set to itself called?</b></p>
+
+<label>
+<input type="radio" name="q8" value="A"
+onclick="check(this,'A','r8')">
+A) Binary relation
+</label><br>
+
+<label>
+<input type="radio" name="q8" value="B"
+onclick="check(this,'A','r8')">
+B) Universal relation
+</label><br>
+
+<label>
+<input type="radio" name="q8" value="C"
+onclick="check(this,'A','r8')">
+C) Identity relation
+</label><br>
+
+<label>
+<input type="radio" name="q8" value="D"
+onclick="check(this,'A','r8')">
+D) Empty relation
+</label>
+
+<p id="r8"></p>
+
+
+<p><b>9. Which of the following is a logical operator?</b></p>
+
+<label>
+<input type="radio" name="q9" value="A"
+onclick="check(this,'A','r9')">
+A) AND
+</label><br>
+
+<label>
+<input type="radio" name="q9" value="B"
+onclick="check(this,'A','r9')">
+B) ADD
+</label><br>
+
+<label>
+<input type="radio" name="q9" value="C"
+onclick="check(this,'A','r9')">
+C) DIVIDE
+</label><br>
+
+<label>
+<input type="radio" name="q9" value="D"
+onclick="check(this,'A','r9')">
+D) MOD
+</label>
+
+<p id="r9"></p>
+
+
+<p><b>10. A tree in graph theory is a graph that is:</b></p>
+
+<label>
+<input type="radio" name="q10" value="A"
+onclick="check(this,'A','r10')">
+A) Connected and contains no cycles
+</label><br>
+
+<label>
+<input type="radio" name="q10" value="B"
+onclick="check(this,'A','r10')">
+B) Disconnected
+</label><br>
+
+<label>
+<input type="radio" name="q10" value="C"
+onclick="check(this,'A','r10')">
+C) Complete only
+</label><br>
+
+<label>
+<input type="radio" name="q10" value="D"
+onclick="check(this,'A','r10')">
+D) Always cyclic
+</label>
+
+<p id="r10"></p>
+
+
+<br>
+
+<button onclick="showScore()">Submit Quiz</button>
+
+<h2 id="result"></h2>
+
+
+<script>
+
+function check(answer, correct, resultId) {
+
+    let result = document.getElementById(resultId);
+
+    if (answer.value == correct) {
+
+        answer.parentElement.classList.add("correct");
+
+        result.innerHTML = "Correct Answer ✓";
+        result.className = "correct";
+
+    } else {
+
+        answer.parentElement.classList.add("wrong");
+
+        result.innerHTML =
+            "Wrong Answer ✗ <br> Correct Answer: " + correct;
+
+        result.className = "wrong";
+    }
+}
+
+
+function showScore() {
+
+    let answers = {
+        q1: "A",
+        q2: "B",
+        q3: "B",
+        q4: "B",
+        q5: "A",
+        q6: "B",
+        q7: "A",
+        q8: "A",
+        q9: "A",
+        q10: "A"
+    };
+
+    let score = 0;
 
     for (let question in answers) {
 
@@ -116,53 +369,16 @@
             'input[name="' + question + '"]:checked'
         );
 
-        let options = document.querySelectorAll(
-            'input[name="' + question + '"]'
-        );
-
-        // Reset previous colors
-        options.forEach(function(option) {
-            option.parentElement.style.color = "";
-            option.parentElement.style.fontWeight = "";
-        });
-
-        if (selected) {
-
-            // Correct answer
-            if (selected.value === answers[question]) {
-
-                score++;
-
-                // Leave correct answer as it is
-                selected.parentElement.style.color = "";
-
-            }
-
-            // Wrong answer
-            else {
-
-                // Selected wrong answer → RED
-                selected.parentElement.style.color = "red";
-                selected.parentElement.style.fontWeight = "bold";
-
-                // Correct answer → GREEN
-                options.forEach(function(option) {
-
-                    if (option.value === answers[question]) {
-                        option.parentElement.style.color = "green";
-                        option.parentElement.style.fontWeight = "bold";
-                    }
-
-                });
-
-            }
+        if (selected && selected.value == answers[question]) {
+            score++;
         }
     }
 
     document.getElementById("result").innerHTML =
-        "Your Score: " + score + " / 10";
+        "Your Total Score: " + score + " / 10";
 }
-    </script>
+
+</script>
 
 </body>
 </html>
